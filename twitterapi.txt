@@ -1,17 +1,16 @@
+
 Llaves de Acceso: José Barrios.
 
 API Key:
-fqgnY6mgOGEG2VBp8C53FxoHQ
+
 
 API secret Key:
-E1lGYxU4mhG5dngNstoh8GWvhOxpZJuCECx2kbntmydWX0LpgJ
+
 
 Bearer token
-AAAAAAAAAAAAAAAAAAAAAKxAJwEAAAAAiL2q38MtdNFaQmQpve1HAL55KGQ%3DcLKFZiYS4nmtVfQoMfHu5T7hdgmpjLp2lacY2g6f7DQF2st5nY
+
 
 Access Token
-1328402461015552003-QuLRYCpxfzJpu1by84NAm68RZoqw48
+
 
 Access Token Secret
-aNVl68mdhKoc4yzP4goi6SnXM82GG6gRfln1n2HEgJboZ
-
