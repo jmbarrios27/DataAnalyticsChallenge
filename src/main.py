@@ -7,10 +7,10 @@ from google.colab import files
 plt.style.use('fivethirtyeight')
 
 """Definiendo Credenciales"""
-consumer_key = "fqgnY6mgOGEG2VBp8C53FxoHQ"
-consumer_secret = "E1lGYxU4mhG5dngNstoh8GWvhOxpZJuCECx2kbntmydWX0LpgJ"
-access_key = "1328402461015552003-QuLRYCpxfzJpu1by84NAm68RZoqw48"
-secret_key = "aNVl68mdhKoc4yzP4goi6SnXM82GG6gRfln1n2HEgJboZ"
+consumer_key = ""
+consumer_secret = ""
+access_key = ""
+secret_key = ""
 autenticacion = tweepy.OAuthHandler(consumer_key, consumer_secret)
 autenticacion.set_access_token(access_key, secret_key)
 """Variable donde voy a llamar a la API"""
@@ -235,7 +235,7 @@ En el segundo Word-cloud se puede observar que algunas de estas palabras vacias,
 **Stemming:** Reducción de palabras a su raiz ejemplo: coriendo --> correr.
 """
 
-#!pip install nltk // en caso de usar jupyternotebook
+#!pip install nltk
 
 import nltk
 nltk.download('stopwords')
@@ -258,7 +258,7 @@ for par in tweeterDF["cleanedTweet"].values:
 print(stop_words)
 
 #Lista de Palabras luego de remover stopwords, tokenizarlas y reducirlas a su raiz
-print(cleanWordsList)
+# print(cleanWordsList) -- Imprimir en Caso de querer observar el dataset limpio
 
 #Transformado X a un array para luego transformarlo a Dataframe para que cada palabra quede en una columna
 cleanWordsList
@@ -615,7 +615,7 @@ Es un tipo de red neuronal artificial que utiliza datos secuenciales o datos de 
 Se distinguen por su "memoria", ya que toman información de entradas anteriores para influir en la entrada y salida actuales.
 """
 
-#!pip install keras // en caso de usar jupyternotebook
+#!pip install keras
 
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
@@ -697,7 +697,7 @@ plt.show()
 
 """### **Resultados:**
 
-Más del 89% de nuestras predicciones de sentimiento han coincidido con la variable objetivo, por lo que es un porcentaje bastante acertado a nuestro análisis.
+Más del 87% de nuestras predicciones de sentimiento han coincidido con la variable objetivo, por lo que es un porcentaje bastante acertado a nuestro análisis.
 """
 
 #Reporte de Clasificación
@@ -772,7 +772,7 @@ for par_es in df_es["cleanedTweet"].values:
 print(stop_words_es)
 
 #Imprimimos las listas de palabras que han resultado luego de eliminar las stopwords, y pasar por el proceso de stemming.
-print(cleanWordsList_es)
+# print(cleanWordsList_es) ---> imprimir en caso de querer ver el dataset limpio en lista,
 
 #Transformado X a un array para luego transformarlo a Dataframe para que cada palabra quede en una columna
 my_array_es = np.asarray(cleanWordsList_es)
@@ -850,7 +850,7 @@ puede encontrar la documentación en el siguiente enlace:
 """
 
 """Instalarmos la librería a través de pip"""
-#!pip install sentiment-analysis-spanish // en caso de usar jupyternotebook
+#!pip install sentiment-analysis-spanish
 
 #Creando Funcion para extrarer la Polaridad para Textos en Español con ayuda de la libreria sentiment_analysis_spanish
 from sentiment_analysis_spanish import sentiment_analysis
@@ -995,7 +995,7 @@ labels_es = data_es.keys()
 colors = ['red','silver','green']
 explode_es = [0.05, 0.05,0.05]
 plt.pie(x=data_es, autopct="%.1f%%", explode=explode_es, labels=labels_es, pctdistance=0.63,colors=colors)
-plt.title('Distribución por tipo de Polaridad para Tweets que contienen el término buscado de:{term} muestra significativa uno' , fontsize=14);
+plt.title(f'Distribución por tipo de Polaridad para Tweets que contienen el término buscado de: {term} muestra significativa uno' , fontsize=14);
 my_circle_es = plt.Circle((0, 0), 0.8, color = 'white')
 p = plt.gcf()
 p.gca().add_artist(my_circle_es)
@@ -1012,7 +1012,7 @@ labels_esB = data_esB.keys()
 colors = ['red','silver','green']
 explode_esB = [0.05, 0.05,0.05]
 plt.pie(x=data_esB, autopct="%.1f%%", explode=explode_esB, labels=labels_esB, pctdistance=0.63,colors=colors)
-plt.title(f'Distribución por tipo de Polaridad para Tweets que contienen el término buscado de:{term} muestra significativa Dos' , fontsize=14);
+plt.title(f'Distribución por tipo de Polaridad para Tweets que contienen el término buscado de: {term} muestra significativa Dos' , fontsize=14);
 my_circle_esB = plt.Circle((0, 0), 0.8, color = 'white')
 p = plt.gcf()
 p.gca().add_artist(my_circle_esB)
